@@ -75,16 +75,15 @@ const Header: React.FC = () => {
 							alt="KROSS STORE"
 							sx={{ height: 40, marginRight: 2 }}
 						/>
-						{!isMobile && (
-							<Box>
-								<Typography variant="h6" component="h1" fontWeight={700}>
-									KROSS STORE
-								</Typography>
-								<Typography variant="caption" component="p" fontSize={14}>
-									Магазин лучших кроссовок
-								</Typography>
-							</Box>
-						)}
+
+						<Box>
+							<Typography variant="h6" component="h1" fontWeight={700}>
+								KROSS STORE
+							</Typography>
+							<Typography variant="caption" component="p" fontSize={14}>
+								Магазин лучших кроссовок
+							</Typography>
+						</Box>
 					</Box>
 					<Box display="flex" alignItems="center">
 						{isMobile ? (

@@ -1,7 +1,7 @@
 /** @format */
 
 import { actionTypes } from "./actionTypes"
-import { IActions, IInitialStateShoes, IShoes } from "./types"
+import { IActions, IInitialStateShoes } from "./types"
 
 const initialState: IInitialStateShoes = {
 	shoes: [],

@@ -27,7 +27,7 @@ const Header: React.FC = () => {
 	const [isCartOpen, setIsCartOpen] = useState(false)
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 	const theme = useTheme()
-	const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+	const isMobile = useMediaQuery(theme.breakpoints.down("md"))
 
 	const { removeFromCart, clearCart } = useTypedDispatch()
 	const cartItems = useTypedSelector(state => state.shoesReducer.cart)

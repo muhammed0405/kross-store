@@ -24,7 +24,7 @@ export default function ShoesCard({
 	id,
 	collectionId,
 }: IShoesCardProps) {
-	const { addToCart, addToLiked } = useTypedDispatch()
+	const { addToCart, removeFromCart, addToLiked } = useTypedDispatch()
 	const { cart, liked } = useTypedSelector(state => state.shoesReducer)
 
 	const isInCart = cart.some(item => item.id === id)
@@ -35,7 +35,11 @@ export default function ShoesCard({
 	}
 
 	const handleCartClick = () => {
-		addToCart({ id, collectionId, name, image, price })
+		if (isInCart) {
+			removeFromCart(id)
+		} else {
+			addToCart({ id, collectionId, name, image, price })
+		}
 	}
 
 	return (
